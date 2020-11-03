@@ -23,11 +23,11 @@ DateTime nextMondayDateTime = myDate.EndOfWeek(DayOfWeek.Friday);
 ```cs
 public enum Celebrity
 {
-    [Display(Name = "John Carrey")] JimCarrey,
+    [Display(Name = "Jim Carrey")] JimCarrey,
     [Display(Name = "Mariah Carey")] MariahCarey
 }
 
-// Return the display name "John Carrey"
+// Return the display name "Jim Carrey"
 string jimCarreyDisplayName = Celebrity.JimCarrey.GetDisplayName();
 ```
 
