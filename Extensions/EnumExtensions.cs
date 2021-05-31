@@ -15,7 +15,7 @@ namespace ImproveYourDotnetStyle.Extensions
                     .GetMember(value.ToString())
                     .First()
                     .GetCustomAttribute<DisplayAttribute>()
-                    .Name;
+                    ?.Name;
             }
             catch
             {
