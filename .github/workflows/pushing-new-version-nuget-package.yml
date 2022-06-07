@@ -26,7 +26,7 @@ jobs:
         run: echo "RELEASE_VERSION=${{ steps.get_version.outputs.version-without-v }}" >> $GITHUB_ENV
 
       - name: Build and generate NuGet package
-        run:
+        run: |
           dotnet build -c Release -p:Version=${RELEASE_VERSION}
           dotnet pack -c Release -p:Version=${RELEASE_VERSION} -o out
 
