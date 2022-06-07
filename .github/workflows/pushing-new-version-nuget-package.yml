@@ -27,7 +27,7 @@ jobs:
 
       - name: Build and generate NuGet package
         run: |
-          cd glowing-telegram
+          cd dotnet-utils
           dotnet build -c Release -p:Version=${RELEASE_VERSION}
           dotnet pack -c Release -p:Version=${RELEASE_VERSION} -o out
 
