@@ -26,8 +26,7 @@ jobs:
         run: echo "RELEASE_VERSION=${{ steps.get_version.outputs.version-without-v }}" >> $GITHUB_ENV
 
       - name: Build and generate NuGet package
-        run: |
-          cd dotnet-utils
+        run:
           dotnet build -c Release -p:Version=${RELEASE_VERSION}
           dotnet pack -c Release -p:Version=${RELEASE_VERSION} -o out
 
@@ -35,4 +34,4 @@ jobs:
           ls -R ./
 
       - name: Push generated package
-        run: dotnet nuget push ./dotnet-utils/out/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate -n
+        run: dotnet nuget push ./out/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate -n
