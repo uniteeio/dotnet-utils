@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace ImproveYourDotnetStyle.Extensions
+namespace Unitee.Extensions
 {
     public class EnumExtensions
     {

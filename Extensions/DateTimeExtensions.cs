@@ -1,6 +1,6 @@
 using System;
 
-namespace ImproveYourDotnetStyle.Extensions
+namespace Unitee.Extensions
 {
     public static class DateTimeExtensions
     {
