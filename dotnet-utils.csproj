@@ -7,7 +7,7 @@
         <NeutralLanguage>en-US</NeutralLanguage>
         <VersionPrefix>1.0.0</VersionPrefix>
         <Title>Dotnet Utils</Title>
-        <Description>.NET Core toolbox with extansions methods, helpers, annotations, etc ...</Description>
+        <Description>.NET Core toolbox with extensions methods, helpers, annotations, etc ...</Description>
         <PackageProjectUrl>https://www.nuget.org/packages/Unitee.DotnetUtils/</PackageProjectUrl>
         <RepositoryUrl>https://github.com/uniteeio/dotnet-utils</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
