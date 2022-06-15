@@ -2,6 +2,8 @@
 
 Various of methods, tools and extensions used commonly in Unitee.
 
+![logo](./docs/logo/logo.png)
+
 ## Fluent blob storage
 
 Fluent API for Azure Blob Storage manipulation.
