@@ -5,7 +5,7 @@ namespace Unitee.Extensions;
 
 public static class ServiceCollectionExtension
 {
-	public static void AddCustomServices(this IServiceCollection services)
+	public static void AddResponseMaker(this IServiceCollection services)
 	{
 		services.AddSingleton<ResponseMaker>();
 	}
