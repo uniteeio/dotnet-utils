@@ -102,7 +102,7 @@ public record FluentBlobStorage
         BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(ContainerName);
         BlobClient blobClient = containerClient.GetBlobClient(FileName);
 
-        var res = await blobClient.UploadAsync(Convert.FromBase64String(b64), Headers);
+        var res = await blobClient.UploadAsync(new MemoryStream(Convert.FromBase64String(b64)), Headers);
 
         return (blobClient.Uri, res);
     }
