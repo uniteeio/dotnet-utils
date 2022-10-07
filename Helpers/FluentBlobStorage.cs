@@ -94,6 +94,20 @@ public record FluentBlobStorage
         return (blobClient.Uri, res);
     }
 
+    public async Task<(Uri, Azure.Response<BlobContentInfo>)> UploadAsync(string b64)
+    {
+        AssertGuards();
+
+        BlobServiceClient blobServiceClient = new(ConnectionString);
+        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(ContainerName);
+        BlobClient blobClient = containerClient.GetBlobClient(FileName);
+
+        var res = await blobClient.UploadAsync(Convert.FromBase64String(b64), Headers);
+
+        return (blobClient.Uri, res);
+    }
+
+
     public (Stream, BlobProperties) OpenRead()
     {
         AssertGuards();
